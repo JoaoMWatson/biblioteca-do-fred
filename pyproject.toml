@@ -13,6 +13,7 @@ flask-cors = "^4.0.0"
 alchemical = "^0.7.1"
 marshmallow = "^3.20.1"
 flask-marshmallow = "^0.15.0"
+python-dotenv = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -42,6 +43,7 @@ profile = "black"
 line_length = 79
 
 [tool.taskipy.tasks]
+run = "flask run"
 lint = "blue --check --diff . && isort --check --diff"
 auto-lint = "blue . && isort ."
 docs = "mkdocs serve"
