@@ -24,6 +24,8 @@ Um item pode ou não fazer parte de uma serie, ele representa um livro, manga ou
 
 ## Serie
 
+Serie representa um conjunto de itens da mesma "franquia", Serie 1 -> n Livros.
+
 ### Entidade
 
 - id (not null)
@@ -41,11 +43,10 @@ Um item pode ou não fazer parte de uma serie, ele representa um livro, manga ou
 - [ ] Buscar todos as series da biblioteca
 - [ ] Buscar serie especifico da biblioteca
 
-Serie == Lista de livros pertencentes a mesma linha
 
 ## Usuário/biblioteca
 
-
+O usuário representa uma biblioteca e vice versa, cada usuário tem apenas a sua coleção e não é possível criar novas, tanto itens soltos quanto coleções pertencem ao usuário/biblioteca
 
 ### Entidade
 
