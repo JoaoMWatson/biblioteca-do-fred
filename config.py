@@ -10,10 +10,7 @@ class Config(object):
     # Database
     ALCHEMICAL_DATABASE_URL = os.environ.get(
         'ALCHEMICAL_DATABASE_URL'
-    ) or 'sqlite:///' + os.path.join(basedir, 'db.db')
-    ALCHEMICAL_ENGINE_OPTIONS = (
-        os.environ.get('ALCHEMICAL_ENGINE_OPTIONS') or True
-    )
+    ) or 'sqlite:///' + os.path.join(basedir, 'fredinho.db')
 
     # API documentation
     APIFAIRY_TITLE = 'Biblioteca do Frederico'
@@ -26,4 +23,3 @@ class Config(object):
     # Server
     FLASK_ENV = os.environ.get('FLASK_ENV')
     FLASK_DEBUG = os.environ.get('FLASK_DEBUG')
-    

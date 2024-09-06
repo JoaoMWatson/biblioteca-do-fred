@@ -2,17 +2,20 @@
 
 Api para gerenciar coleção pessoal de livros, mangas e quadrinhos.
 
-## Items
+## Item
 
 Um item pode ou não fazer parte de uma serie, ele representa um livro, manga ou quadrinho de uma coleção/usuário
 
-### Entidade
+### Model
 
 - id (not null)
 - titulo (not null)
-- autor (not null)
-- numero (null)
-- serie (null)
+- gênero (not null)
+- lançamento(not null)
+- edição(null)
+- fk autor (not null)
+- fk serie (null)
+- fk editora (not null)
 
 ### Rotas
 
@@ -21,28 +24,6 @@ Um item pode ou não fazer parte de uma serie, ele representa um livro, manga ou
 - [ ] Excluir item na biblioteca(Deve excluir da serie tbm)
 - [ ] Buscar todos os itens da biblioteca
 - [ ] Buscar item especifico da biblioteca
-
-## Serie
-
-Serie representa um conjunto de itens da mesma "franquia", Serie 1 -> n Livros.
-
-### Entidade
-
-- id (not null)
-- titulo (not null)
-- autor (not null)
-- quantidade (not null)
-- volumes (not null)
-- items (not null)
-
-### Rotas
-
-- [ ] Inserir serie na biblioteca
-- [ ] Editar serie na biblioteca
-- [ ] Excluir serie na biblioteca
-- [ ] Buscar todos as series da biblioteca
-- [ ] Buscar serie especifico da biblioteca
-
 
 ## Usuário/biblioteca
 
