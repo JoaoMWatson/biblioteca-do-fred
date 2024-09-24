@@ -12,8 +12,8 @@ item_schema = ItemSchema()
 
 
 @items.route('/items', methods=['GET'])
-@body(item_schema)
+@response(item_schema)
 @response("Ok", HTTPStatus.OK)
 def all():
     """Return all items"""
-    return ("")
+    return ("todos itens")

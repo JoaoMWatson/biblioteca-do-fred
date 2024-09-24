@@ -43,3 +43,12 @@ O usuário representa uma biblioteca e vice versa, cada usuário tem apenas a su
 - [ ] Editar usuário/biblioteca
 
 Todo usuário é uma biblioteca
+
+para iniciar o migrate
+$ flask db init
+
+para criar migrate
+$ flask db migrate -m "Initial migration."
+
+para subir migrate
+$ flask db upgrade

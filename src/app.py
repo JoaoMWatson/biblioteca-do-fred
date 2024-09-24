@@ -14,7 +14,6 @@ cors = CORS()
 ma = Marshmallow()
 
 def create_app():
-    # Main
     app = Flask(__name__)
     app.config.from_object(Config)
 
@@ -27,6 +26,12 @@ def create_app():
 
     from .routes.item_route import items
     app.register_blueprint(items)
+    from .routes.user_route import users
+    app.register_blueprint(users)
+    from .routes.author_route import authors
+    app.register_blueprint(authors)
+    from .routes.publisher_route import publishers
+    app.register_blueprint(publishers)
 
     @app.route('/')
     def index():

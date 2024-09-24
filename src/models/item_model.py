@@ -3,11 +3,9 @@ from datetime import datetime
 
 import sqlalchemy as sa
 from alchemical import Model
-from flask import current_app
 from sqlalchemy import orm as orm
 
 from src.date import naive_utcnow
-from src.app import db
 
 
 class Item(Model):
@@ -15,7 +13,8 @@ class Item(Model):
 
     id: orm.Mapped[int] = orm.mapped_column(sa.Integer, primary_key=True)
     title: orm.Mapped[str] = orm.mapped_column(sa.String(255), nullable=False)
-    gender: orm.Mapped[str] = orm.mapped_column(sa.String(255), nullable=False)
+    category: orm.Mapped[int] = orm.mapped_column(sa.Integer, nullable=False, index=True) # ENUM: 1-> livro 2-> revista 3-> manga 4-> HQ 5-> outro
+    gender: orm.Mapped[str] = orm.mapped_column(sa.String(70), nullable=False)
     release_date: orm.Mapped[datetime] = orm.mapped_column(
         sa.DateTime, nullable=False
     )
